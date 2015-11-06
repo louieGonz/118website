@@ -1,0 +1,17 @@
+body{
+    background-color: #152836;
+}
+
+/* Scale images to thumbnail size */
+div img {
+	width: 20%;
+	height: 20%;
+}
+
+/* Define border around the images */
+div a {
+	border: 3px solid #FFF;
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+}

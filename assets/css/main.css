@@ -2374,6 +2374,23 @@
 			.main.style3.secondary {
 				background: #f5f6f7;
 			}
+			
+		.main.style4 {
+			text-align: center;
+			padding: 1em 0 1em 0;
+		}
+		
+			.main.style4 .content > header {
+				margin-bottom: 2em;
+			}
+
+			.main.style4.primary {
+				background: #fff;
+			}
+
+			.main.style4.secondary {
+				background: #f5f6f7;
+			}
 
 /* Dark */
 
