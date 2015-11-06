@@ -2,16 +2,17 @@ body{
     background-color: #152836;
 }
 
-/* Scale images to thumbnail size */
+/* Scale images to thumbnail size and set margins for better positioning */
 div img {
 	width: 20%;
 	height: 20%;
+	margin-top: 10px;
+	margin-right: 10px;
 }
 
-/* Define border around the images */
+/* Hide the link text (underscore) for now */
 div a {
-	border: 3px solid #FFF;
-	border-radius: 3px;
-	overflow: hidden;
-	position: relative;
+	line-height: 0; 
+    font-size: 0;
+    color: transparent; 
 }
