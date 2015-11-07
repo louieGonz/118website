@@ -159,7 +159,7 @@
   z-index: 1080;
   left: 0;
   position: absolute;
-  top: 60px; /* changed from 0 to place below the main header */
+  top: 0px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.45);
 }
@@ -511,7 +511,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-pager-outer {
-  bottom: 60px;
+  bottom: 80px; /* changed from 60px to so it is above big captions */
   left: 0;
   position: absolute;
   right: 0;

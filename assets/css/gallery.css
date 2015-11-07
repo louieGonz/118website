@@ -1,5 +1,5 @@
 body{
-    background-color: #152836;
+    background-color: #152836; /* ececec can hide that annoying icon */
 }
 
 /* Scale images to thumbnail size and set margins for better positioning */
@@ -15,4 +15,20 @@ div a {
 	line-height: 0; 
     font-size: 0;
     color: transparent; 
+}
+
+/* Override styling of the template CSS for proper display of subtitles */
+
+.lg-sub-html{
+	font-family: "Open Sans", sans-serif;
+	letter-spacing: 0px;
+}
+
+.lg-sub-html h4 {
+	line-height: 11.45px;
+}
+
+.lg-sub-html p {
+	line-height: 20px;
+	font-weight: 500;
 }

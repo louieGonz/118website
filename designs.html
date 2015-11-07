@@ -5,8 +5,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link type="text/css" rel="stylesheet" href="assets/lightGallery/css/lightgallery.css" />
 		<link rel="stylesheet" href="assets/css/gallery.css" />
+		<link rel="stylesheet" href="assets/lightGallery/css/lightgallery.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		
 	</head>
 	<body>
 	<!-- Headers -->
@@ -34,19 +36,19 @@
 			</div>
 		</section>
 		
-	<!-- The gallery itself -->
+	<!-- The gallery itself. The data-sub-html attribute is the HTML for the image captions, edit the attribute to modify the subtitle -->
 		<div id="lightgallery">
-			<a href="images/primary_design_side.jpg"> <!-- Primary design side view -->
-				<img src="images/primary_design_side.jpg" />
+			<a href="images/primary_design_side.jpg" data-sub-html="<h4>Primary design side view</h4><p>Actuators powered by servos (or solenoids) control entry of the ball from the funnel into the ball launcher and the rotation of the IR beacon and ultrasonic sensor to allow the sensors to sweep through the area. A motor at the launcher joint propels the balls outwards</p>">
+				<img src="images/primary_design_side.jpg" />  <!-- Primary design side view -->
 			</a>
-			<a href="images/primary_design_top.jpg"> <!-- Primary design top view -->
-				<img src="images/primary_design_top.jpg" />
+			<a href="images/primary_design_top.jpg" data-sub-html="<h4>Primary design top view</h4><p>The positions of the tape sensors are visible and show four in the back and one in front to allow flexibility in implementing line detection</p>"> 
+				<img src="images/primary_design_top.jpg" /> <!-- Primary design top view -->
 			</a>
-			<a href="images/mk_ii.jpg"> <!-- Backup design 2 -->
-				<img src="images/mk_ii.jpg" />
+			<a href="images/mk_ii.jpg" data-sub-html="<h4>Backup design 2</h4><p></p>"> 
+				<img src="images/mk_ii.jpg" /> <!-- Backup design 2 -->
 			</a>
-			<a href="images/mk_iii.jpg"> <!-- Backup design 3 -->
-				<img src="images/mk_iii.jpg" />
+			<a href="images/mk_iii.jpg" data-sub-html="<h4>Backup design 3</h4><p></p>"> 
+				<img src="images/mk_iii.jpg" /> <!-- Backup design 3 -->
 			</a>
 
 		</div>
@@ -60,7 +62,7 @@
 
 		</footer>
 		
-	<!-- Scripts -->
+	<!-- Scripts - To modify lightgallery functionalty add or remove references to the plugin JS files here-->
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 		<script src="assets/js/jquery.poptrox.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -70,8 +72,6 @@
 		<script src="assets/js/main.js"></script>
 		<script src="assets/lightGallery/js/lightgallery.js"></script>
         <script src="assets/lightGallery/js/lg-fullscreen.js"></script>
-        <script src="assets/lightGallery/js/lg-thumbnail.js"></script>
-        <script src="assets/lightGallery/js/lg-video.js"></script>
         <script src="assets/lightGallery/js/lg-autoplay.js"></script>
         <script src="assets/lightGallery/js/lg-zoom.js"></script>
         <script src="assets/lightGallery/js/lg-hash.js"></script>
@@ -84,6 +84,15 @@
 			$("#lightgallery").lightGallery({
 				pager: true
 			}); 
+		});
+		
+		<!-- Event listeners to hide or show site header -->
+		$('#lightgallery').on('onBeforeOpen.lg',function(event){
+			$('header').hide();
+		});
+		
+		$('#lightgallery').on('onBeforeClose.lg', function(event){
+			$('header').show();
 		});
 		</script>
 		
