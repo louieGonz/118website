@@ -1,5 +1,10 @@
-body{
+body {
     background-color: #152836; /* ececec can hide that annoying icon */
+}
+
+/* Get rid of animation icon that doesn't go away */
+body:before {
+	animation: none !important;
 }
 
 /* Scale images to thumbnail size and set margins for better positioning */
